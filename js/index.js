@@ -8,7 +8,6 @@ $(document).ready(function() {
             $.each(data, function(i, list) {
                 $data.append('<td>Title: ' + list.title + ' </td>')
             });
-
         },
         error: function(errorThrown) {
             console.log(errorThrown);
@@ -16,26 +15,82 @@ $(document).ready(function() {
     });
 });
 
-// $(document).ready(function() {
-//     let $data = $('.album');
-//     $.ajax({
-//         url: 'http://www.devcodecampmusiclibrary.com/api/music',
-//         dataType: 'json',
-//         type: 'get',
-//         success: function(data, textStatus, jqXHR) {
-//             $.each(data, function(i, list) {
-//                 $data.append('<td>Album: ' + list.album + ' </td>')
-//             });
+$(document).ready(function() {
+    let $data = $('.album');
+    $.ajax({
+        url: 'http://www.devcodecampmusiclibrary.com/api/music',
+        dataType: 'json',
+        type: 'get',
+        success: function(data, textStatus, jqXHR) {
+            $.each(data, function(i, list) {
+                $data.append('<td>Album: ' + list.album + ' </td>')
+            });
+        },
+        error: function(errorThrown) {
+            console.log(errorThrown);
+        }
+    });
+});
 
-//         },
-//         error: function(errorThrown) {
-//             console.log(errorThrown);
-//         }
-//     });
+$(document).ready(function() {
+    let $data = $('.artist');
+    $.ajax({
+        url: 'http://www.devcodecampmusiclibrary.com/api/music',
+        dataType: 'json',
+        type: 'get',
+        success: function(data, textStatus, jqXHR) {
+            $.each(data, function(i, list) {
+                $data.append('<td>Artist: ' + list.artist + ' </td>')
+            });
+        },
+        error: function(errorThrown) {
+            console.log(errorThrown);
+        }
+    });
+});
+
+$(document).ready(function() {
+    let $data = $('.genre');
+    $.ajax({
+        url: 'http://www.devcodecampmusiclibrary.com/api/music',
+        dataType: 'json',
+        type: 'get',
+        success: function(data, textStatus, jqXHR) {
+            $.each(data, function(i, list) {
+                $data.append('<td>Genre: ' + list.genre + ' </td>')
+            });
+        },
+        error: function(errorThrown) {
+            console.log(errorThrown);
+        }
+    });
+});
+
+$(document).ready(function() {
+    let $data = $('.release');
+    $.ajax({
+        url: 'http://www.devcodecampmusiclibrary.com/api/music',
+        dataType: 'json',
+        type: 'get',
+        success: function(data, textStatus, jqXHR) {
+            $.each(data, function(i, list) {
+                $data.append('<td>Release Date: ' + list.releaseDate + ' </td>');
+            });
+        },
+        error: function(errorThrown) {
+            console.log(errorThrown);
+        }
+    });
+});
+
+
+// $(document).ready(function() {
+
+//     getMusicLibrary();
+
 // });
 
-// $(document).ready(function() {
-
+// function getMusicLibrary() {
 //     let $data = $('#music-library');
 //     $.ajax({
 //         url: 'http://www.devcodecampmusiclibrary.com/api/music',
@@ -55,4 +110,4 @@ $(document).ready(function() {
 //             console.log(errorThrown);
 //         }
 //     });
-// });
+// }

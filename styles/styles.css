@@ -1,3 +1,13 @@
-tr {
-    margin-bottom: 20px;
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+table {
+    border-style: solid;
+}
+
+td {
+    padding: 0 20px 0 20px;
+    text-align: center;
+    background-color: #E4F5D4;
 }
